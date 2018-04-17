@@ -51,7 +51,6 @@ public class Bullet : MonoBehaviour {
             Damage(target);
         }
 
-        
         Destroy(gameObject);
     }
 
@@ -70,6 +69,8 @@ public class Bullet : MonoBehaviour {
     void Damage (Transform enemy)
     {
         Destroy(enemy.gameObject);
+
+        PlayerStats.Money += 20;
     }
 
     void OnDrawGizmosSelected ()
